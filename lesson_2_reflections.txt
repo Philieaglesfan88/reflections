@@ -3,3 +3,19 @@ It creates metadata used by Git to store history. You need to do it so that Git 
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 The staging area simply holds files which are not yet part of your repository. It offers the ability to only commit things you know are ready, even if you have some experimental changes.
+
+How can you use the staging area to make sure you have one commit per logical change?
+You can make large changes in your working directory to experiment, but move changes a few at a time into the staging area, to keep your commits small and organized.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+Branches can help when you want to make a (potentially experimental) change which could be disruptive to the program. You can make the change in a branch, 
+while youreself or others continue to work in the main branch undisrupted.
+
+How do the diagrams help you visualize the branch structure?
+They don't really. It can help to visualize where different branches split off.
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+Merging two branches together adds all of the changes from a side branch back to the Head node. This allows changes that were worked on seperately to be added back to the main project. We represent it in the graph the way we do, because all of the commits from each branch are maintained, and each commit maintains it's parent commit correctly.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+The pro is that it saves a lot of time and effort. The con is that if it makes a mistake it can be difficult to catch since you aren't manually reviewing it.
